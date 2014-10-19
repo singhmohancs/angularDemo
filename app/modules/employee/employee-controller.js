@@ -92,16 +92,6 @@ angular.module('angularDemo.employees.controller', [
             $state.go('employees.list');
         };
 
-        $scope.openModalBox = function() {
-            var myOtherModal = $modal({
-                title: 'Add new employees',
-                scope: $scope,
-                contentTemplate: 'modules/employee/partial/modal.html',
-                show: false
-            });
-            myOtherModal.$promise.then(myOtherModal.show);
-        };
-
         /**
          * Set form to scope
          * @author Mohan Singh ( gmail::singhmohancs@gmail.com, skype :: mohan.singh42 )
