@@ -1,0 +1,47 @@
+{
+	"status":"success",
+	"data":[
+		{
+			"empId": 0,
+			"name": "Nishant",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		},{
+			"empId": 1,
+			"name": "Sanjay",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		},
+		{
+			"empId": 2,
+			"name": "Saurabh",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		},
+		{
+			"empId": 3,
+			"name": "Raman",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		},
+		{
+			"empId": 4,
+			"name": "Nitin",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		},
+		{
+			"empId": 5,
+			"name": "Anil",
+			"location":"chandigarh",
+			"dateOfjoining": "2012-04-13",
+			"dob": "2012-04-13"
+		}
+	],
+	"errorMessage" : "error message"
+}

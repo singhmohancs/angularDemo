@@ -1,0 +1,17 @@
+<!-- toolbar for list state -->
+<div data-ng-if="$state.current.name === 'employees.list'">
+	<a ui-sref="employees.list.addNew" class="btn btn-success">Add new emloyee</a>
+</div>
+
+<!-- toolbar for list addNew state -->
+<div data-ng-if="$state.current.name === 'employees.list.addNew'">
+	<a ui-sref="employees.list" class="btn btn-success">Employees</a>
+	<a ui-sref="employees.list" data-ng-click="clearLocalStorage()" class="pull-right">Cancel</a>
+</div>
+
+<!-- toolbar for list edit state -->
+<div data-ng-if="$state.current.name === 'employees.list.edit'">
+	<a ui-sref="employees.list" class="btn btn-success">Employees</a>
+	<a ui-sref="employees.addNew" class="btn btn-success">Add new emloyee</a>
+	<a ui-sref="employees.list" data-ng-click="clearLocalStorage()" class="pull-right">Cancel</a>
+</div>

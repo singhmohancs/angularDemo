@@ -1,0 +1,50 @@
+<div  class="panel panel-default" data-ng-if="($state.current.name === 'employees.list.addNew' )|| ($state.current.name === 'employees.list.edit')">
+  <div class="panel-body">
+    <!-- view: child view(this is child view for add and edit sates) -->
+    <div ui-view="listpage-view"></div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form class="form-inline" role="searchform"  style="margin-bottom:15px;">
+      <div class="form-group">
+        <label class="sr-only" for="searchText">Search Text</label>
+        <input ng-model = "searchText" name="searchText" class="form-control" type="text" placeholder="Search in list" id="searchText" />
+      </div>
+      <div class="checkbox">
+        <label>
+          <a href="" title="clear filter" data-ng-click=" searchText = '' ">Clear filter</a>
+        </label>
+      </div>
+    </form>
+    <table class="table table-styled">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Date of birth</th>
+          <th>Date of joining</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="emp in employeesList | filter:searchText ">
+          <td>{{emp.empId}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.location}}</td>
+          <td>{{emp.dob}}</td>
+          <td>{{emp.doj}}</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-sm" ui-sref="employees.list.edit({empId:emp.empId})">Edit</button>
+            <button type="button" class="btn btn-default btn-sm" data-ng-click="delete(emp.empId);">Delete</button>
+          </td>
+        </tr>
+        <tr class="danger" data-ng-if="employeesList.length === 0">
+          <td colspan="6" align="center">There is no employee</td>
+        </tr>
+      </tbody>
+    </table>
+  </div></div>
+  <p><a data-ng-click="clearLocalStorage();" href="" title="Clear local Storage">Clear local Storage</a></p>
