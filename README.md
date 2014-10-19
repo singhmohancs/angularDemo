@@ -5,6 +5,11 @@ Installation :
 
 download project directory from https://github.com/singhmohancs/angularDemo.git
 
+Requirments :
+1)NodeJs
+2)Grunt 
+3)Ruby (Used to compass SASS)
+
 Run below commands :
 
 1) cd /project directory
